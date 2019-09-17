@@ -78,17 +78,21 @@ def commandesClient():
         return 'ok'
 
 
-@app.route('/cuisine', methods=['GET'])
+@app.route('/cuisine/', methods=['GET'])
 def addCommande():
     #     La cuisine récupère ses commandes (Qt, Ui_Mainwindow)  etat: 1:
     #     Requête GET @/commandes/cuisine
     if request.method == 'GET':
-        dico = {'commandes': [
-            {'id': 1, 'nom': 'Gerard', 'etat': 1, 'adresse': 'rue Perpignan'}]}
-        return jsonify(dico)
+
+        db = get_db()
+        res = db.execute("select id, nom, etat from commandes")
+        resultat = res.fetchall()
+        if len(resultat) == 0:
+            return (" Response 403")
+        return jsonify(resultat)
 
 
-@app.route('/newDetection', methods=['POST'])
+"""@app.route('/newDetection', methods=['POST'])
 def newDetection():
     print("reception")
 
@@ -105,7 +109,7 @@ def newDetection():
                datetime, plaque, image])
     db.commit()
 
-    return ""
+    return """
 
 
 #   La cuisine met la commande à jour ... click sur 1 nouvelle commande
