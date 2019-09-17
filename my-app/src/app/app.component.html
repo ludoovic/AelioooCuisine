@@ -1,0 +1,20 @@
+<h1>Votre Commande Chez Aeliooo !</h1>
+<h3>vous allez déguster notre délicieux "Menu Unique"</h3>
+<form [formGroup]="commandeForm">
+  <input type="text" placeholder="nom" formControlName="nom" /><br />
+  <input type="text" placeholder="adresse" formControlName="adresse" /><br />
+
+  <button type="submit" value="Commander" (click)="onSubmit()">
+    commander
+  </button>
+</form>
+<br />
+<h3>Status apres avoir validé votre commande : 1</h3>
+<h4>
+  ||||| Status de votre commande |||||<br />
+  1: Nouveau <br />
+  2: En cours de préparation <br />
+  3: Prêt <br />
+  4: En cours de livraison <br />
+  5: Livré
+</h4>

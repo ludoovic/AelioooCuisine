@@ -1,0 +1,19 @@
+(Commandes pour changer le titre de la fenetre "Flask" et lancer les server a partir du fichier)
+$host.ui.RawUI.WindowTitle = "flask"
+cd .\Desktop\CuisineXavier\
+.\venv\Scripts\activate
+python AeliooCuisine.py
+
+
+(Commandes pour changer le titre de la fenetre "Angular" et lancer les server a partir du fichier)
+$host.ui.RawUI.WindowTitle = "angular"
+cd .\Desktop\CuisineXavier\
+.\venv\Scripts\activate
+cd my-app
+ng serve
+
+
+(Commandes pour changer le titre de la fenetre "venv" c'est juste l'environnement virtuel)
+$host.ui.RawUI.WindowTitle = "venv"
+cd .\Desktop\CuisineXavier\
+.\venv\Scripts\activate
