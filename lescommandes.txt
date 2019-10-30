@@ -17,3 +17,22 @@ ng serve
 $host.ui.RawUI.WindowTitle = "venv"
 cd .\Desktop\AelioooCuisine\
 .\venv\Scripts\activate
+
+
+______ Pour Linux _____
+(Commandes pour changer le titre de la fenetre "Flask" et lancer les server a partir du fichier) 
+cd /home/octave/Desktop/python/AelioooCuisine 
+source venv/bin/activate
+python AeliooCuisine.py 
+
+
+(Commandes pour changer le titre de la fenetre "Angular" et lancer les server a partir du fichier) 
+cd /home/octave/Desktop/python/AelioooCuisine 
+source venv/bin/activate
+cd my-app 
+ng serve 
+
+
+(Commandes pour changer le titre de la fenetre "venv" c'est juste l'environnement virtuel) 
+cd /home/octave/Desktop/python/AelioooCuisine 
+source venv/bin/activate
